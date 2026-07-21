@@ -18,6 +18,7 @@ public class Controller {
         return "<h1>public page</h1>";
     }
 
+    @GetMapping
 
     @PostMapping("/login")
     public String login(@RequestBody User user){
