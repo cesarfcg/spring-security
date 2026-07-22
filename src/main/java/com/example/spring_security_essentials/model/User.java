@@ -1,9 +1,6 @@
 package com.example.spring_security_essentials.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Generated;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -18,10 +15,11 @@ import java.util.List;
 @RequiredArgsConstructor
 @Getter
 @Setter
+@Table(name = "TB_USER")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
     private String email;
     private String password;
     @Override
