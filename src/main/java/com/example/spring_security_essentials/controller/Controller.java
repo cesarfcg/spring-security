@@ -19,6 +19,11 @@ public class Controller {
         return "<h1>public page</h1>";
     }
 
+    @GetMapping("/admin")
+    public String adminRoute(){
+        return "<h1>Admin page</h1>";
+    }
+
     @GetMapping("private")
     public String privateRoute(){
         return "<h1>private page</h1>";
