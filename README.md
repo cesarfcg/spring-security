@@ -29,3 +29,9 @@ API REST desenvolvida com Spring Boot para implementação de autenticação e a
 - UserDetailsService
 - AuthenticationManager
 - PasswordEncoder
+- 
+## Documentação
+
+- Spring Boot: https://docs.spring.io/spring-boot/
+- Spring Security: https://docs.spring.io/spring-security/reference/
+- Spring Data JPA: https://docs.spring.io/spring-data/jpa/reference/
