@@ -1,5 +1,6 @@
 package com.example.spring_security_essentials.controller;
 
+import com.example.spring_security_essentials.dto.UserResponseDTO;
 import com.example.spring_security_essentials.model.User;
 import com.example.spring_security_essentials.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -24,12 +25,14 @@ public class Controller {
         return "<h1>Admin page</h1>";
     }
 
-    @GetMapping("private")
+    @GetMapping("/private")
     public String privateRoute(){
         return "<h1>private page</h1>";
     }
     @GetMapping("/list")
-    public List<User> users(){
-        return userRepository.findAll();
+    public List<UserResponseDTO> users(){
+        return userRepository.findAll()
+                .stream()
+                .map(user-> new UserResponseDTO( user.getId(),user.getEmail())).toList();
     }
 }
