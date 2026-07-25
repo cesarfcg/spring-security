@@ -1,6 +1,6 @@
-# Spring Security Essentials
+# Spring Security Basics
 
-API REST desenvolvida com Spring Boot para implementação de autenticação e autorização utilizando Spring Security.
+API REST desenvolvida com Spring Boot para implementação de autenticação e autorização utilizando os conceitos iniciais do Spring Security.
 
 ## Tecnologias
 
